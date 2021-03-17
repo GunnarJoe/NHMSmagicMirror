@@ -92,8 +92,8 @@ class MNUButton(tkinter.Frame):
     def __init__(self,parent):
         tkinter.Frame.__init__(self,parent, bg = 'black')
         #images for buttons
-        image1=Image.open('C:/SeniorSemesterMNU/Senior Capstone/list.png')
-        image2=Image.open('C:/SeniorSemesterMNU/Senior Capstone/blueprint.png')
+        image1=Image.open('/Images/list.png')
+        image2=Image.open('/Images/blueprint.png')
         test1=ImageTk.PhotoImage(image1)
         test2=ImageTk.PhotoImage(image2)
         labelimage1=tkinter.Label(image=test1)        
@@ -114,12 +114,12 @@ class MNUButton(tkinter.Frame):
 class MNUimage(tkinter.Frame):
     def __init__(self,parent):
         tkinter.Frame.__init__(self,parent, bg = 'black')
-        image1=Image.open('C:/SeniorSemesterMNU/Senior Capstone/NHMSbanner.png')
+        image1=Image.open('/Images/NHMSbanner.png')
         test=ImageTk.PhotoImage(image1)
         label1=tkinter.Label(image=test,bg='black')
         label1.image=test
         label1.place(x=500,y=0)
-        image2=Image.open('C:/SeniorSemesterMNU/Senior Capstone/MNU.jpg')
+        image2=Image.open('/Images/MNU.jpg')
         test2=ImageTk.PhotoImage(image2)
         label2=tkinter.Label(image=test2,bg='black')
         label2.image=test2
