@@ -1,4 +1,7 @@
 # NHMSmagicMirror
+
+#ABOUT
+
 This project is to create a smart mirror for the Natural Health and Mathematical Sciences department at MidAmerica Nazarene University.
 It uses python in order to create a friendly UI that will help people navigate the building.
 
@@ -23,5 +26,6 @@ $cd NHMSmagicMirror
 $python SmartMirror.py
 
 #FURTHER INQUIRIES
+
 If there are questions about how some code works, or bugs are occurring that can not be figured out you can contact me through email.
 gunnarjoebrown@gmail.com
