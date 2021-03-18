@@ -6,7 +6,8 @@ This is public code, and anyone has the rights to use this code as they please.
 
 
 #INSTALLATION
-In order to install tthis code you must first have git installed on your computer. 
+
+In order to install this code you must first have git installed on your computer. 
 
 the command to download this entire repository is.
 
