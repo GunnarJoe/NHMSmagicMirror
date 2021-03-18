@@ -16,8 +16,10 @@ $git clone https://github.com/GunnarJoe/NHMSmagicMirror.git
 In order to run the code you will need to import and install tkinter on your current version of python, and also import and install
 tkImage on your version of python as well. 
 
-After these modules have been installed to run the program use the following commands.  
+After these modules have been installed to run the program use the following commands.
+
 $cd NHMSmagicMirror 
+
 $python SmartMirror.py
 
 #FURTHER INQUIRIES
