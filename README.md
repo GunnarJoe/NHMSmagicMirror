@@ -17,7 +17,7 @@ In order to run the code you will need to import and install tkinter on your cur
 tkImage on your version of python as well. 
 
 After these modules have been installed to run the program use the following commands.  
-$cd NHMSmagicMirror
+$cd NHMSmagicMirror 
 $python SmartMirror.py
 
 #FURTHER INQUIRIES
