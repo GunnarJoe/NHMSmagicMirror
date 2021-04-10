@@ -92,38 +92,38 @@ class MNUButton(tkinter.Frame):
     def __init__(self,parent):
         tkinter.Frame.__init__(self,parent, bg = 'black')
         #images for buttons
-        image1=Image.open('/Images/list.png')
-        image2=Image.open('/Images/blueprint.png')
+        image1=Image.open('/home/pi/NHMSmagicMirror/Images/list.png')
+        image2=Image.open('/home/pi/NHMSmagicMirror/Images/blueprint.png')
         test1=ImageTk.PhotoImage(image1)
         test2=ImageTk.PhotoImage(image2)
         labelimage1=tkinter.Label(image=test1)        
         labelimage2=tkinter.Label(image=test2)
         labelimage1.image=test1
         labelimage2.image=test2
-        labelimage1.place(x=10,y=750)
-        labelimage2.place(x=1335,y=25)
+        labelimage1.place(x=10,y=1000)
+        labelimage2.place(x=1660,y=25)
 
         self.button1 = tkinter.Button(text ='Click Me For\n Professor Locations',bg='white', width=20)
-        self.button1.place(x=50, y=750)
+        self.button1.place(x=50, y=1000)
         self.button1.bind("<Button>",lambda e: ProfNum(self))
         self.button2 = tkinter.Button(text='Click Me For \n Building Layout', bg='white',width=20)
-        self.button2.place(x=1375, y=25)
+        self.button2.place(x=1700, y=25)
         self.button2.bind("<Button>",lambda e: OsborneLayout(self))
 
 #dispalys the NHMS banner on top of screen
 class MNUimage(tkinter.Frame):
     def __init__(self,parent):
         tkinter.Frame.__init__(self,parent, bg = 'black')
-        image1=Image.open('/Images/NHMSbanner.png')
+        image1=Image.open('/home/pi/NHMSmagicMirror/Images/NHMSbanner.png')
         test=ImageTk.PhotoImage(image1)
         label1=tkinter.Label(image=test,bg='black')
         label1.image=test
-        label1.place(x=500,y=0)
-        image2=Image.open('/Images/MNU.jpg')
+        label1.place(x=650,y=0)
+        image2=Image.open('/home/pi/NHMSmagicMirror/Images/MNU.jpg')
         test2=ImageTk.PhotoImage(image2)
         label2=tkinter.Label(image=test2,bg='black')
         label2.image=test2
-        label2.place(x=1375,y=700)
+        label2.place(x=1760,y=975)
 
 #class that displays the date and time in the top left corner
 class Time(tkinter.Frame):
@@ -180,12 +180,15 @@ class FullScreen:
         #self is used to access the instance of a class 
         self.tk = tkinter.Tk()
         self.tk.configure(background = 'black')
+    
         #sections the screen into a top and bottom section
         self.topFrame = tkinter.Frame(self.tk, background = 'black')
         self.bottomFrame = tkinter.Frame(self.tk, background = 'black')
         self.topFrame.pack(side = tkinter.TOP, fill=tkinter.BOTH, expand= tkinter.YES)
         self.bottomFrame.pack(side = tkinter.BOTTOM, fill=tkinter.BOTH, expand= tkinter.YES)
-        self.state = False
+        self.state=False
+        self.tk.attributes("-fullscreen",True)
+ 
         
         #Display Button
         self.button = MNUButton(self.bottomFrame)
@@ -209,9 +212,10 @@ class FullScreen:
         self.verses = Verse(self.bottomFrame)
         self.verses.pack(side=tkinter.TOP)
 
-        
+       
         
 #runs the main program and calls the fullscreen function
 if __name__ == '__main__':
     window = FullScreen()
     window.tk.mainloop()         
+
