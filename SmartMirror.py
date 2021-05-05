@@ -45,30 +45,43 @@ def setlocale(name):
 class OsborneLayout(tkinter.Toplevel):
     def __init__(self,master=None):
         super().__init__(master=master)
-        self.title("New Window")
-        self.geometry("200x200")
-        label=tkinter.Label(self,text="This is the new Window")
-        label.pack()
+        self.title("Osborne Layout")
+        self.geometry("1500x1000")
+    
+        image1=Image.open('/home/pi/NHMSmagicMirror/Images/firstfloorblueprint.png').resize((750,1000),Image.ANTIALIAS)
+        image2=Image.open('/home/pi/NHMSmagicMirror/Images/secondfloorblueprint.png').resize((750,1000),Image.ANTIALIAS)
+        test1=ImageTk.PhotoImage(image1)
+        test2=ImageTk.PhotoImage(image2)
+        labelimage1=tkinter.Label(self,image=test1)        
+        labelimage2=tkinter.Label(self,image=test2)
+        labelimage1.image=test1
+        labelimage2.image=test2
+        labelimage1.place(x=10,y=0)
+        labelimage2.place(x=750,y=0)
+
 
 #class that opens a new window with a png of professors room number
 class ProfNum(tkinter.Toplevel):
     def __init__(self,master=None):
         super().__init__(master=master)
         self.title("New Window")
-        self.geometry("200x200")
-        label=tkinter.Label(self,text="This is the new Window")
-        label.pack()
-
+        self.geometry("750x750")
+        image1=Image.open('/home/pi/NHMSmagicMirror/Images/ProfessorRoomsPaint.png').resize((750,750),Image.ANTIALIAS)
+        test1=ImageTk.PhotoImage(image1)
+        labelimage1=tkinter.Label(self,image=test1)        
+        labelimage1.image=test1
+        labelimage1.place(x=10,y=0)
+        
 
        
 
 #class to display verses on screen
 class Verse(tkinter.Frame):
     def __init__(self,parent):
-        verses = ["Philippians 4:13 I Can Do All Things Through Christ Who Strengthens Me (Gunnar Brown)","Verse2","Verse3"]
+        verses = ["Philippians 4:13 I can do all things through he who strengthens me \n(Gunnar Brown creator of mirror)","Micah 6:8 He has shown you, O mortal, what is good. And what does the Lord require of you?\n To act justly and to love mercy and to walk humbly with your God. \n(Jordan Mantha  Professor of Chemistry)","Proverbs 4:23 Above all else, guard your heart, for everything you do flows from it. \n(Jill Speicher Assistant Professor of Biology)","Hebrews 12:11 No discipline seems pleasant at the time, but painful.\n Later on, however, it produces a harvest of righteousness and peace for those who have been trained by it. \n(Rion Taylor Professor of Biology)","Colossians 1:16 For in him all things were created: things in heaven and on earth,\n visible and invisible, whether thrones or powers or rulers or authorities; all things have been created through him and for him. \n(Mark Brown Professor of Mathematics)","Jeremiah 29:11 For I know the plans I have for you, declares the LORD, plans to prosper you\n and not to harm you, plans to give you hope and a future. \n(Teresa Hale-Lespier Professor of Computer Science)"]
      
         tkinter.Frame.__init__(self,parent,bg='black')
-        self.text2 = tkinter.Label(self, compound=tkinter.CENTER, text="Professor Favorite Verses",font=('Helvetica', 30),fg='white',bg='black')
+        self.text2 = tkinter.Label(self, compound=tkinter.CENTER, text="Professors' Favorite Verses",font=('Helvetica', 30),fg='white',bg='black')
         self.text2.pack()
 
      
